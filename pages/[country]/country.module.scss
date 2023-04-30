@@ -1,0 +1,18 @@
+@import "styles/mixins";
+
+.country {
+  padding-top: 14.4rem;
+  padding-bottom: 5rem;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 8.7rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: response(5, 7, 76.8, 144);
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-bottom: 7rem;
+  }
+}

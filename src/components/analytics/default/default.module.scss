@@ -1,0 +1,41 @@
+@import "styles/variables";
+
+.container {
+  width: 27rem;
+  height: 100%;
+  padding: 15rem 0 9rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    width: 50rem;
+  }
+}
+
+.img {
+  width: 11.8rem;
+  height: 11.8rem;
+
+  @media screen and (min-width: 768px) {
+    width: 16.5rem;
+    height: 16.5rem;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: $grey;
+  text-align: center;
+  margin: 3rem 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin: 5rem 0;
+  }
+}

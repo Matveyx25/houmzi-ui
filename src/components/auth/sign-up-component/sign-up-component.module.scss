@@ -1,0 +1,60 @@
+@import "/styles/variables";
+
+.register {
+  &__link {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $blue;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 540px) {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__terms {
+    margin-top: 4rem;
+
+    &Link {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $blue;
+      text-decoration: none;
+
+      @media screen and (min-width: 540px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 3rem;
+
+    @media screen and (min-width: 540px) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__redirect {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $black;
+    text-align: center;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 540px) {
+      font-size: 1.6rem;
+      margin-top: 4rem;
+    }
+
+    & * + * {
+      margin-left: .4rem;
+
+      @media screen and (min-width: 540px) {
+        margin-left: .6rem;
+      }
+    }
+  }
+}

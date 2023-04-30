@@ -1,0 +1,74 @@
+import Axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, CancelTokenStatic } from 'axios';
+import { GetServerSidePropsContext } from 'next';
+import { ITokens } from '../interfaces/auth/tokens.interface';
+import { getAccessToken, getCookie, removeCookie, setTokens } from './cookies.helpers';
+
+export const blogUrl: string = 'https://api.rassafel.space';
+export const axiosBlog: AxiosInstance = Axios.create({ baseURL: blogUrl });
+
+let isRefreshing = false;
+let refreshSubscribers: any[] = [];
+
+export const axiosWithContext = (ctx: GetServerSidePropsContext = null): AxiosInstance & { CancelToken?: CancelTokenStatic } => {
+  const axios: AxiosInstance & { CancelToken?: CancelTokenStatic } = Axios.create({ baseURL: 'https://api.dev.houmzi.ru/api/' });
+
+  axios.interceptors.request.use(
+    (config: AxiosRequestConfig) => {
+      if (!config.headers['Authorization'])
+        config.headers['Authorization'] = `Bearer ${getAccessToken(ctx)}`;
+      return config;
+    },
+  );
+
+  axios.interceptors.response.use(
+    (response: AxiosResponse) => response,
+    (error: AxiosError) => {
+      const originalRequest = error.config;
+
+      if (error.response?.status === 401) {
+        if (!isRefreshing) {
+          isRefreshing = true;
+
+          Axios.post('https://api.dev.houmzi.ru/api/auth/refresh', { refreshToken: getCookie(ctx, 'refreshToken') },
+            { headers: { Authorization: `Bearer ${getAccessToken(ctx)}` } })
+            .then((response: AxiosResponse<ITokens>) => response.data)
+            .then((tokens: ITokens) => {
+              setTokens(ctx, tokens);
+              isRefreshing = false;
+              onRrefreshed(tokens.accessToken);
+            })
+            .catch((err) => {
+              removeCookie(ctx, 'accessToken');
+              removeCookie(ctx, 'refreshToken');
+              return Promise.reject(err);
+            });
+        }
+
+        return new Promise((resolve) => {
+          subscribeTokenRefresh((token: string) => {
+            originalRequest.headers['Authorization'] = 'Bearer ' + token;
+            resolve(Axios(originalRequest));
+          });
+        });
+      } else {
+        return Promise.reject(error);
+      }
+    },
+  );
+
+  function subscribeTokenRefresh(cb: any) {
+    refreshSubscribers.push(cb);
+  }
+
+  function onRrefreshed(token: string) {
+    refreshSubscribers.map(cb => cb(token));
+  }
+
+  return axios;
+};
+
+
+
+
+
+

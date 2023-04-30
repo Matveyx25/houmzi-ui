@@ -1,0 +1,26 @@
+@import "/styles/variables";
+
+.subtitle {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: $black;
+  text-align: center;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 440px) {
+    padding: 0 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.img {
+  width: 12.4rem;
+  height: 12.4rem;
+  margin: 0 auto;
+  display: block;
+
+  @media screen and (min-width: 440px) {
+    width: 18rem;
+    height: 18rem;
+  }
+}

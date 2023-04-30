@@ -1,0 +1,91 @@
+@import "styles/variables";
+
+.card {
+  width: 30.5rem;
+  height: 55.2rem;
+  background: #FFF;
+  padding: 3rem 0;
+  border-radius: 2rem;
+  box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .card__label {
+    width: 6.6rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $orange;
+    text-align: center;
+    background: $orange-light;
+    padding: .5rem .6rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .card__img {
+    margin-bottom: 3rem;
+  }
+
+  .card__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black;
+    margin-bottom: .6rem;
+  }
+
+  .card__desc {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $grey;
+    margin-bottom: 2rem;
+  }
+
+  .card__price {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 500;
+    color: $blue;
+    margin-bottom: 3rem;
+
+    &:before,
+    &:after {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      font-weight: 400;
+    }
+
+    &:before {
+      content: '$';
+      vertical-align: super;
+    }
+
+    &:after {
+      content: 'month';
+      color: $grey;
+      margin-top: .5rem;
+      display: block;
+    }
+  }
+
+  .card__options {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $black;
+    text-align: center;
+    list-style: none;
+
+    li + li {
+      margin-top: 1.2rem;
+    }
+  }
+
+  .card__btn {
+    width: 20.5rem;
+    height: 4.5rem;
+    margin-top: auto;
+  }
+}

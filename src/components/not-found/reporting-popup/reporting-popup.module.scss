@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: $black;
+  text-align: center;
+}
+
+.btn {
+  width: 23rem;
+  margin-top: 3rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 5rem;
+  }
+}

@@ -1,0 +1,23 @@
+@import "/styles/variables";
+
+.tabs {
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+
+  &__item {
+    font: 1.6rem/2rem $font-family;
+    color: $black;
+    text-decoration: none;
+    transition: color .2s;
+    cursor: pointer;
+
+    &.active {
+      color: $blue;
+    }
+
+    & + & {
+      margin-left: 3rem;
+    }
+  }
+}

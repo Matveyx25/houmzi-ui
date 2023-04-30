@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  margin-top: 2.5rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: auto;
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    margin-top: 2.4rem;
+  }
+}
+
+.select {
+  margin-bottom: 4rem;
+}

@@ -1,0 +1,10 @@
+.rename {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1608;
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1608;
+    background: rgba(0, 0, 0, .3);
+  }
+}
+
+@keyframes fade_enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.fade_enter {
+  animation: fade_enter both ease-in;
+  animation-duration: 300ms;
+}
+
+@keyframes fade_leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_leave {
+  animation: fade_leave both ease-out;
+  animation-duration: 300ms;
+}

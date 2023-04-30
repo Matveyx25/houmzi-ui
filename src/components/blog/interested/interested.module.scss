@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.interested {
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 2.5rem;
+  }
+
+  &__item {
+    width: 25rem;
+  }
+}

@@ -1,0 +1,51 @@
+@import "styles/variables";
+
+.filters {
+  max-width: 65.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+
+  &__swiper {
+    padding: 5rem 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+
+    & > div {
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item {
+    width: 13.3rem;
+    height: 6.3rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+    background: $white;
+    box-shadow: 0 1rem 5rem rgba(124, 165, 245, .15);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s;
+    cursor: pointer;
+
+    &.active {
+      color: $blue;
+    }
+  }
+}

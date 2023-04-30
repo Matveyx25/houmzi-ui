@@ -1,0 +1,24 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.content {
+  background: $grey-light;
+  padding: 8rem 2.5rem 4rem;
+  margin: 8.3rem -2.5rem 0;
+  position: relative;
+
+  @media screen and (min-width: 375px) {
+    padding: response(8, 9.2, 37.5, 76.8) response(2.5, 3, 37.5, 76.8) 4rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: response(9.2, 6, 76.8, 144) response(3, 6, 76.8, 144) response(4, 6, 76.8, 144);
+    border-radius: 4rem;
+    margin: response(9, 10, 76.8, 144) 0 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 6rem;
+    margin: 10rem 0 0;
+  }
+}

@@ -1,0 +1,31 @@
+@import "/styles/variables";
+
+.listings {
+  &__card {
+    width: 26rem;
+
+    &:first-child {
+      margin-left: 2.5rem;
+
+      @media screen and (min-width: 768px) {
+        margin-left: 5rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-left: 7rem;
+      }
+    }
+
+    &:last-child {
+      margin-right: 2.5rem;
+
+      @media screen and (min-width: 768px) {
+        margin-right: 5rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-right: 7rem;
+      }
+    }
+  }
+}

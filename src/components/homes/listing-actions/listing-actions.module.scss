@@ -1,0 +1,39 @@
+@import "/styles/variables";
+
+.actions {
+  display: flex;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: flex-end;
+  }
+
+  &__item {
+    min-width: 3rem;
+    height: 3rem;
+    color: $blue;
+    background: rgba($orange-light, .5);
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &:hover {
+      background: rgba($blue-light, .3);
+    }
+
+    & + & {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.btn {
+  color: $blue !important;
+  background: rgba($orange-light, .5) !important;
+
+  &:hover {
+    background: rgba($blue-light, .3) !important;
+  }
+}

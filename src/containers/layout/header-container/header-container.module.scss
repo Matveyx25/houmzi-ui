@@ -1,0 +1,35 @@
+@import "/styles/variables";
+
+.header {
+  background: transparent;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1608;
+  transition: background-color .2s, transform .2s;
+
+  @media screen and (min-width: 600px) {
+    background: $white;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    position: sticky;
+  }
+
+  &_scrolled {
+    background: $white;
+  }
+
+  &_hide {
+    transform: translateY(-100%);
+  }
+
+  &_openMenu {
+    transform: translateY(0);
+  }
+}

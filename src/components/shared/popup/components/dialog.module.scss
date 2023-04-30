@@ -1,0 +1,85 @@
+@import "/styles/variables";
+
+.dialog {
+  width: 100%;
+  min-width: 28rem;
+  max-width: calc(100% - 4rem);
+  height: max-content;
+  max-height: calc(100% - 4rem);
+  background: #fff;
+  padding: 4rem .4rem;
+  border-radius: 2rem;
+  margin: auto;
+  box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+  display: grid;
+  align-content: start;
+  grid-template-rows: auto auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2307;
+
+  @media screen and (min-width: 540px) {
+    padding: 5rem 3rem;
+  }
+
+  &_scroll {
+    height: auto;
+  }
+
+  &__close {
+    color: $black;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  &__header {
+    font: 2.4rem/3.1rem $font-family;
+    font-weight: 500;
+    color: $black;
+    text-align: center;
+    padding: 0 2.6rem;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 540px) {
+      font: 3rem/3.8rem $font-family;
+      font-weight: 500;
+    }
+  }
+
+  &__scroll {
+    height: 100%;
+    padding: 0 2rem;
+    overflow: auto;
+  }
+
+  &__content {
+    height: max-content;
+  }
+}
+
+@keyframes fade_enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.fade_enter {
+  animation: fade_enter both ease-in;
+  animation-duration: 300ms;
+}
+
+@keyframes fade_leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_leave {
+  animation: fade_leave both ease-out;
+  animation-duration: 300ms;
+}

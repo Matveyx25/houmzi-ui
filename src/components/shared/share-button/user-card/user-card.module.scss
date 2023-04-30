@@ -1,0 +1,66 @@
+@import "styles/variables";
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.2rem;
+  align-items: center;
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+}
+
+.avatar {
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    width: 7.4rem;
+    height: 7.4rem;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: $black;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.phone {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: $grey;
+  display: inline-block;
+  margin-top: .3rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: .6rem;
+  }
+}
+
+.checkbox {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: white;
+  border: .1rem solid $black;
+  border-radius: .5rem;
+  transition: background-color .2s, boder-color .2s;
+  cursor: pointer;
+
+  &.active {
+    background: $blue;
+    border-color: $blue;
+  }
+}

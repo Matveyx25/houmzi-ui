@@ -1,0 +1,49 @@
+@import "/styles/variables";
+
+.login {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.9rem;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 540px) {
+      margin-bottom: 3.7rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $blue;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 540px) {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &__redirect {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $black;
+    text-align: center;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 540px) {
+      font-size: 1.6rem;
+      margin-top: 4rem;
+    }
+
+    & * + * {
+      margin-left: .4rem;
+
+      @media screen and (min-width: 540px) {
+        margin-left: .6rem;
+      }
+    }
+  }
+}

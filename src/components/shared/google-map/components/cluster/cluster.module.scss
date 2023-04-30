@@ -1,0 +1,82 @@
+@import "styles/variables";
+
+.cluster {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  background: $orange;
+  border: 3px solid $white !important;
+  border-radius: 10.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translate(-50% -50%);
+  transition: background-color .2s;
+
+  &.hovered,
+  &:hover {
+    background: $blue;
+
+    & .listings {
+      display: flex !important;
+    }
+  }
+}
+
+.listings {
+  width: 400px;
+  max-height: 340px;
+  background: $white;
+  padding: 15px 10px 0 15px;
+  border-radius: 15px;
+  filter: drop-shadow(0 4px 4px rgba(31, 51, 82, .15));
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 16;
+  cursor: default;
+  transform: translate(-50%, -37px);
+
+
+  &:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: $white;
+    border-radius: 0 0 3px 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
+
+  &__wrap {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__scroll {
+    width: 100%;
+    padding-right: 15px;
+    overflow: auto;
+
+    &:after {
+      content: '';
+      height: 30px;
+      background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+      position: fixed;
+      border-radius: 0 0 10px 10px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 16;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "/styles/variables";
+
+.amenities {
+  &__content {
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__block {
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__title {
+    font: 1.6rem/2rem $font-family;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 2.4rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 2.5rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    & > * + * {
+      margin-top: 0 !important;
+    }
+  }
+
+  & textarea {
+    height: 12rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 1024px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}

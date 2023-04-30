@@ -1,0 +1,42 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.buy {
+  height: 100%;
+  padding-top: 10rem;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 2rem;
+  }
+
+  &__content {
+    overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+      margin-top: 4rem;
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__map {
+    height: 60vh;
+    margin-top: 2rem;
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
+      height: auto;
+      margin-top: 0;
+      flex-grow: 1;
+
+      & > div > div {
+        border-radius: 0 6rem 0 0;
+      }
+    }
+  }
+}

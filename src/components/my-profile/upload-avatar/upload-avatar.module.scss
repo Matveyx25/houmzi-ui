@@ -1,0 +1,36 @@
+@import "/styles/variables";
+
+.upload {
+  font: 1.4rem/2rem $font-family;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__subtitle {
+    color: $black;
+  }
+
+  &__label {
+    margin: 4rem 0;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__img {
+    font-size: 4.9rem;
+    color: $grey;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__desc {
+    color: $grey;
+  }
+}

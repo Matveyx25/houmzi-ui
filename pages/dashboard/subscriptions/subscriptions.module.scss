@@ -1,0 +1,72 @@
+@import "/styles/variables";
+
+.newsletters {
+  height: 100%;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    background: $white;
+    padding: 4rem 3rem 20rem;
+    border-radius: 2rem;
+  }
+
+  &__wrap {
+    height: 100%;
+    padding: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__img {
+    width: 26.7rem;
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      right: 3rem;
+      bottom: 4rem;
+    }
+
+    @media screen and (min-width:1150px) {
+      width: 40rem;
+      right: 4rem;
+      bottom: 2.6rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: 4rem;
+
+    @media screen and (min-width: 768px) {
+      max-width: 53rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    font: 1.6rem/2rem $font-family;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 3rem;
+    align-items: center;
+
+    & + & {
+      margin-top: 3rem;
+    }
+  }
+
+  &__unsubscribe {
+    font: 1.6rem/2rem $font-family;
+    font-weight: 500;
+    color: $blue;
+    margin-top: 4rem;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 6rem;
+    }
+  }
+}

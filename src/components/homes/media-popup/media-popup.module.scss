@@ -1,0 +1,194 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.popup {
+  height: 100vh;
+  background: $white;
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1608;
+
+  @media screen and (min-width: 768px) {
+    padding: 4.8rem 5rem 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 4.5rem 7rem;
+  }
+
+  &__header {
+    font: 1.6rem/2rem $font-family;
+    color: #A7AEB8;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid rgba($grey, .4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 1440px) {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    & i {
+      color: $black;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    z-index: 1608;
+  }
+
+  &__content {
+    padding: 6.5rem 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      padding: 8.5rem 0;
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding: 4.4rem 0;
+    }
+  }
+
+  &__scroll {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    transition: transform .2s;
+  }
+
+  &__slide {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__media {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+    object-fit: contain;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__indicators {
+    display: flex;
+    align-items: center;
+  }
+
+  &__indicator {
+    width: .4rem;
+    height: .4rem;
+    background: rgba($grey, .5);
+    border-radius: 50%;
+
+    & + & {
+      margin-left: .7rem;
+    }
+
+    &.active {
+      width: .6rem;
+      height: .6rem;
+      background: $blue;
+    }
+  }
+
+  &__arrow {
+    font-size: 1.5rem;
+    color: $grey;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+
+    &_prev {
+      transform: rotate(90deg);
+
+      @media screen and (min-width: 768px) {
+        margin-right: response(1, 4.4, 76.8, 144);
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-right: 4.4rem;;
+      }
+    }
+
+    &_next {
+      transform: rotate(-90deg);
+
+      @media screen and (min-width: 768px) {
+        margin-left: response(1, 4.4, 76.8, 144);
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-left: 4.4rem;
+      }
+    }
+
+    &.disabled {
+      color: $grey-light;
+      cursor: default;
+    }
+  }
+}
+
+@keyframes fade_enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.fade_enter {
+  animation: fade_enter both ease-in;
+  animation-duration: 200ms;
+}
+
+@keyframes fade_leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_leave {
+  animation: fade_leave both ease-out;
+  animation-duration: 200ms;
+}
+
+.clickableArea {
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 16;
+  cursor: pointer;
+
+  &_left {
+    left: 0;
+  }
+
+  &_right {
+    right: 0;
+  }
+}

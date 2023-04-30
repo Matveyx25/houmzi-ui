@@ -1,0 +1,12 @@
+.info {
+  @media screen and (min-width: 1024px) {
+    grid-area: info;
+  }
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 3.8rem;
+  align-items: center;
+}

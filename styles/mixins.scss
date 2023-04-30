@@ -1,0 +1,12 @@
+@function response($s-min, $s-max, $w-min, $w-max, $unit: rem) {
+  $k: ($s-max - $s-min)/($w-max - $w-min);
+  $f: $s-min - $k * $w-min;
+
+  @if $unit == rem {
+    $f: $f * 1rem;
+  } @else {
+    $f: $f * 1px;
+  }
+
+  @return calc(#{$k} * 100vw + #{$f});
+}

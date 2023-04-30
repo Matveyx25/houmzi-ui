@@ -1,0 +1,32 @@
+@import "styles/variables";
+
+.filters {
+  margin-bottom: 2.8rem;
+
+  &__item {
+    width: max-content;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: .4rem;
+      background: $orange;
+      border-radius: .2rem;
+      margin-top: .8rem;
+      display: block;
+      opacity: 0;
+      transition: width .2s, opacity .2s;
+    }
+
+    &.active {
+      &:after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}

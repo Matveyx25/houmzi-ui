@@ -1,0 +1,40 @@
+@import "/styles/variables";
+
+.contacts {
+  &__content {
+    display: grid;
+    grid-gap: 3rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & > div {
+      margin: 0 !important;
+    }
+  }
+
+  &__checkbox {
+    @media screen and (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  &__role {
+    margin-top: 4rem;
+
+    &Title {
+      font: 1.6rem/2rem $font-family;
+      color: $black;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    &Content {
+      & > * + * {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

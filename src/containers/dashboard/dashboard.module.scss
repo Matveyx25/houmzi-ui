@@ -1,0 +1,28 @@
+@import "/styles/variables";
+
+.dashboard {
+  height: 100%;
+  padding-top: 9.4rem;
+  padding-bottom: 4rem;
+  flex-grow: 1;
+  overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 2.5rem;
+    padding-bottom: 3.6rem;
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+
+    @media screen and (min-width: 768px) {
+      background: $grey-light;
+      border-radius: 4rem;
+      margin-left: 3rem;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+  }
+}

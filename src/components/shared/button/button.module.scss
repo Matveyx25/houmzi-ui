@@ -1,0 +1,107 @@
+@import "/styles/variables";
+
+.btn {
+  font: 1.6rem/2rem $font-family;
+  font-weight: 500;
+  padding: .9rem 2rem;
+  border: 0;
+  border-radius: .8rem;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+
+  &.white {
+    color: $black;
+    background: $white;
+    box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+
+    &:hover {
+      background: $grey-light;
+    }
+
+    &:active {
+      color: $blue;
+      box-shadow: none;
+    }
+  }
+
+  &.blue {
+    color: $white;
+    background: $blue;
+
+    &:hover {
+      background: #55b7f3;
+    }
+
+    &:active {
+      background: #9bcefd;
+    }
+
+    &:disabled {
+      background: #cddaec;
+      cursor: default;
+    }
+  }
+
+  &.blueLight {
+    color: $white;
+    background: #6DBBFA;
+
+    &:hover {
+      background: #9BCEFD;
+    }
+
+    &:active {
+      background: #0986E2;
+    }
+
+    &:disabled {
+      background: #aacbfa;
+      cursor: default;
+    }
+  }
+
+  &.blueBorder {
+    font-weight: 400;
+    color: $blue;
+    background: transparent;
+    border: .1rem solid $blue;
+
+    &:hover {
+      color: #55b7f3;
+      border-color: #55B7F3;
+    }
+
+    &:active {
+      color: #9bcefd;
+      border-color: #9BCEFD;
+    }
+
+    &:disabled {
+      color: $grey;
+      border-color: $grey;
+      cursor: default;
+    }
+  }
+
+  &.orange {
+    color: $white;
+    background: #f87728;
+    box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+
+    &:hover {
+      background: $orange;
+    }
+
+    &:active {
+      background: #ffb78f;
+    }
+
+    &:disabled {
+      background: #f8a563;
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+}

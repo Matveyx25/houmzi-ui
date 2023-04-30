@@ -1,0 +1,93 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.cards {
+  display: grid;
+  grid-gap: 5rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10rem 2rem;
+  }
+}
+
+.card {
+  text-align: center;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  &__label {
+    width: 6rem;
+    height: 6rem;
+    background: $orange-light;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 375px) {
+      width: response(6, 7, 37.5, 76.8);
+      height: response(6, 7, 37.5, 78.6);
+      margin-bottom: response(0, 1, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 7rem;
+      height: 7rem;
+      margin: 0 0 1rem;
+    }
+
+    & i {
+      font-size: 3.1rem;
+      color: $orange;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: $black;
+
+    @media screen and (min-width: 375px) {
+      margin-bottom: response(0, 1, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $grey;
+    text-decoration: none;
+    display: block;
+    transition: color .2s;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &_viewAll {
+      font-weight: 500;
+      color: $blue;
+
+      &:hover {
+        color: $blue-light;
+      }
+    }
+  }
+}

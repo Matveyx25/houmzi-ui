@@ -1,0 +1,41 @@
+@import "styles/mixins";
+
+.article {
+  width: 100%;
+  max-width: 108rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 !important;
+  }
+
+  &__wrap {
+    margin-top: 5rem;
+    margin-bottom: 5.5rem;
+    display: grid;
+    grid-gap: 7rem;
+
+    @media screen and (min-width: 768px) {
+      margin-top: response(5, 8, 76.8, 144);
+      margin-bottom: response(5.5, 9, 76.8, 144);
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 0 !important;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: response(4, 6, 120, 144);
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-top: 8rem;
+      margin-bottom: 9rem;
+      grid-gap: 6rem;
+    }
+
+    & > div {
+      margin: 0;
+    }
+  }
+}
+
+

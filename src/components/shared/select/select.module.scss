@@ -1,0 +1,81 @@
+@import "/styles/variables";
+
+.select {
+  width: 100%;
+  font: 1.6rem/2.3rem $font-family;
+  color: black;
+  background: $white;
+  border: .1rem solid rgba($grey, .5);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color .2s;
+  cursor: pointer;
+
+  & span {
+    color: $grey;
+    margin-left: auto;
+    margin-right: 3rem;
+  }
+
+  &_placeholder {
+    color: $grey;
+  }
+
+  &:hover {
+    border-color: $blue-light
+  }
+
+  &__focus {
+    border-color: $blue;
+  }
+
+  &_error {
+    border-color: $red;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__icon {
+    font-size: 1rem;
+    color: $grey;
+
+    &.active {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &__dropdown {
+    width: 100%;
+    max-height: 20rem;
+    background: $white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+    position: absolute;
+    bottom: 0;
+    z-index: 1608;
+    transform: translate(0, calc(100% + 1rem));
+    overflow: auto;
+  }
+
+  &__option {
+    font: 1.6rem/2rem $font-family;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    & + & {
+      margin-top: 2rem;
+    }
+
+    & span {
+      color: $grey;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "/styles/mixins";
+@import "/styles/variables";
+
+.filters {
+  display: flex;
+
+  & > * + * {
+    margin-left: 1rem;
+
+    @media screen and (min-width: 375px) {
+      margin-left: response(1, 1.5, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: response(1.5, 2, 76.8, 102.4);
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__search {
+    height: 3.5rem;
+    flex-grow: 1;
+
+    & i {
+      font-size: 1.8rem;
+      top: .8rem !important;
+      left: 1rem;
+    }
+
+    & input {
+      height: 3.5rem;
+      font-size: 1.4rem;
+      padding-left: 3.6rem;
+    }
+  }
+
+  &__btn {
+    height: 3.5rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    padding: 0 1.2rem;
+
+    @media screen and (min-width: 768px) {
+      min-width: 8.5rem;
+    }
+
+    &_icon {
+      min-width: 3.5rem;
+      font-size: 2.4rem;
+      padding: 0 .6rem;
+    }
+  }
+
+  &__all {
+    @media screen and (min-width: 768px) {
+      position: relative;
+    }
+  }
+}
+
+.select {
+  &__content {
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+  &__filterRange {
+    display: flex;
+    align-items: center;
+
+    & > * + * {
+      margin-left: 1.4rem;
+    }
+  }
+
+  &__divider {
+    font: 1.6rem/2rem $font-family;
+    color: $grey;
+  }
+
+  &__input {
+    width: 14rem;
+  }
+}

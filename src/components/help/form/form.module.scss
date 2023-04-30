@@ -1,0 +1,81 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.form {
+  display: grid;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.4rem 3rem;
+  }
+
+  &__wrap {
+    width: 100%;
+    margin: 7rem auto 5.7rem;
+
+    @media screen and (min-width: 375px) {
+      margin-top: response(7, 8, 37.5, 76.8);
+      margin-bottom: response(5.7, 8, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: response(8, 9, 76.8, 144);
+      margin-bottom: response(8, 9, 76.8, 144);
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 64rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin: 9rem auto;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(1.6, 2.4, 37.5, 76.8);
+      line-height: response(2, 2.8, 37.5, 76.8);
+      margin-bottom: response(3, 4, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__input {
+    @media screen and (min-width: 768px) {
+      margin: 0 !important;
+    }
+  }
+
+  &__textarea {
+    margin-top: .9rem;
+    grid-column: 1/-1;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 !important;
+    }
+  }
+
+  &__btn {
+    width: 12.6rem;
+    margin-top: 4rem;
+    justify-self: center;
+    grid-column: 1/-1;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 1rem;
+    }
+  }
+}

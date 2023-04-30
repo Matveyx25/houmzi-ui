@@ -1,0 +1,28 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.listing {
+  padding-top: 9.4rem;
+  padding-bottom: 4.7rem;
+  flex-grow: 1;
+
+  @media screen and (min-width: 375px) {
+    padding-right: response(2.5, 15, 37.5, 192);
+    padding-left: response(2.5, 15, 37.5, 192);
+  }
+
+  &__content {
+    background: $grey-light;
+    padding: 2rem;
+    border-radius: 4rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 375px) {
+      padding: response(2, 4, 37.5, 102.4);
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 4rem
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "/styles/variables";
+
+.info {
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    height: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    & + & {
+      margin-left: 2.3rem;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+    }
+
+    &_edit {
+      width: 10.8rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 14.4rem;
+      padding: 0;
+    }
+  }
+}

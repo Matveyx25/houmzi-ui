@@ -1,0 +1,52 @@
+.list {
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 2rem;
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 4rem;
+      padding-right: 2rem;
+      margin-left: 5.3rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 60.6rem;
+    }
+  }
+
+  &__scroll {
+    height: 100%;
+    overflow-y: auto;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 1.5rem;
+    }
+
+    &Wrap {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    &:after {
+      content: '';
+      height: 6.9rem;
+      background: linear-gradient(360deg, #F6F7F9 0%, rgba(246, 247, 249, 0) 90.58%);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

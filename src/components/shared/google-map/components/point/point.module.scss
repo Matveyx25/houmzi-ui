@@ -1,0 +1,12 @@
+@import "styles/variables";
+
+.point {
+  width: 24px;
+  height: 24px;
+  background: $blue;
+  border: 3px solid $white !important;
+  border-radius: 50%;
+  position: relative;
+  transform: translate(-50% -50%);
+  transition: background-color .2s;
+}

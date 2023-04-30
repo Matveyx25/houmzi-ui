@@ -1,0 +1,38 @@
+@import "/styles/variables";
+
+.details {
+  &__content {
+    display: grid;
+    grid-gap: 3rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & > div {
+      margin: 0 !important;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-gap: 3rem;
+
+    @media screen and (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  & textarea {
+    height: 12rem;
+  }
+}

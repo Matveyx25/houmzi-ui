@@ -1,0 +1,100 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.swiper {
+  &__container {
+    margin: -4rem 0;
+
+    & > div {
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__wrap {
+    padding: 6rem 0;
+  }
+}
+
+.params {
+  margin: -4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.param {
+  width: max-content;
+  background-color: $white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 5rem rgba(124, 165, 245, .15);
+
+  @media screen and (min-width: 1200px) {
+    width: 24rem;
+  }
+
+  &__wrap {
+    width: max-content;
+    padding: 6rem 0;
+
+    & + & {
+      @media screen and (min-width: 1200px) {
+        margin-left: 3rem;
+      }
+    }
+
+    &:first-child {
+      margin-left: 2.5rem;
+
+      @media screen and (min-width: 768px) {
+        margin-left: 5rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-left: 7rem;
+      }
+    }
+
+    &:last-child {
+      margin-right: 2.5rem;
+
+      @media screen and (min-width: 768px) {
+        margin-right: 5rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        margin-right: 7rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(1.4, 1.6, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+
+  &__label {
+    @extend .param__text;
+    color: $grey;
+  }
+
+  &__value {
+    @extend .param__text;
+    color: $blue;
+  }
+}

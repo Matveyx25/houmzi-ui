@@ -1,0 +1,88 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.category {
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 500;
+    color: $black;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(2.4, 3, 37.5, 76.8);
+      line-height: response(3.2, 3.8, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+  }
+
+  &__list {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-gap: 4rem;
+
+    @media screen and (min-width: 375px) {
+      margin-top: response(4, 5, 37.5, 76.8);
+      margin-bottom: response(5.4, 7, 37.5, 76.8);
+      grid-gap: response(4, 5, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: response(5, 3, 76.8, 144);
+      margin-bottom: response(7, 10, 76.8, 144);
+      grid-gap: response(5, 6, 76.8, 144);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-top: 3rem;
+      margin-bottom: 10rem;
+      grid-gap: 6rem;
+    }
+  }
+}
+
+.list {
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  &__title {
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(1.6, 2.4, 37.5, 78.6);
+      line-height: response(2, 3, 37.5, 78.6);
+      margin-bottom: response(2, 3, 37.5, 78.6);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    color: $grey;
+    text-decoration: none;
+    display: block;
+    transition: color .2s;
+
+    &:hover {
+      color: $blue;
+    }
+
+    & + & {
+      margin-top: 2rem;
+    }
+  }
+}

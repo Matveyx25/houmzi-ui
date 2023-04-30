@@ -1,0 +1,21 @@
+@import "styles/variables";
+
+.parameter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &__label {
+    color: $grey;
+  }
+
+  &__text {
+    color: $black;
+  }
+}

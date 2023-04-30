@@ -1,0 +1,102 @@
+@import "/styles/variables";
+
+.allFilters {
+  height: 100vh;
+  background: $white;
+  padding: 4rem 2.5rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1608;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 50rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+    top: auto;
+    left: auto;
+    transform: translateY(103%);
+  }
+
+  &__header {
+    padding-bottom: 2.3rem;
+    border-bottom: .1rem solid rgba($grey, .4);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__clear {
+    font: 1.6rem/2rem $font-family;
+    font-weight: 500;
+    color: $red;
+    cursor: pointer;
+  }
+
+  &__scroll {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 1rem;
+    }
+
+    &::-webkit-scrollbar {
+      @media screen and (max-width: 767px) {
+        width: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding-bottom: 5rem;
+  }
+
+  &__divider {
+    font: 1.6rem/2rem $font-family;
+    color: $black;
+  }
+
+  &__filterRange {
+    display: flex !important;
+    align-items: center;
+
+    & > * + * {
+      margin-left: 2rem;
+    }
+  }
+
+  &__input {
+    width: 14.6rem;
+  }
+}
+
+@keyframes fade_enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.fade_enter {
+  animation: fade_enter both ease-in;
+  animation-duration: 300ms;
+}
+
+@keyframes fade_leave {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_leave {
+  animation: fade_leave both ease-out;
+  animation-duration: 300ms;
+}

@@ -1,0 +1,36 @@
+@import "/styles/variables";
+
+.sort {
+  display: flex;
+
+  &__item {
+    font: 1.4rem/2rem $font-family;
+    color: $black;
+    text-transform: capitalize;
+    display: flex;
+    cursor: pointer;
+
+    & + & {
+      margin-left: 2rem;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+  }
+
+  &__arrow {
+    font-size: 1rem;
+    color: $grey;
+
+    &_down {
+      transform: rotateZ(180deg);
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+}

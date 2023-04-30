@@ -1,0 +1,76 @@
+.container {
+  font-size: 5px;
+  border: 2px solid #06c;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  appearance: none;
+  user-select: none;
+  outline: none !important;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  border-top: 1.6em solid transparent;
+  border-bottom: 1.6em solid transparent;
+  transition: all .25s ease-out;
+}
+
+.arrowLeft {
+  @extend .arrow;
+  border-right: 2.4em solid #ccc;
+  left: 1.5rem;
+
+  &:hover {
+    border-right-color: #06c;
+  }
+}
+
+.arrowRight {
+  @extend .arrow;
+  border-left: 2.4em solid #ccc;
+  right: 1.5rem;
+
+  &:hover {
+    border-left-color: #06c;
+  }
+}
+
+.month {
+  font-size: 5em;
+  font-weight: 500;
+  text-align: center;
+  color: #06c;
+  word-spacing: 5px;
+  padding: 0.5em 0.25em;
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template: repeat(7, auto) / repeat(7, auto);
+}
+
+.cell {
+  text-align: center;
+  align-self: center;
+  letter-spacing: 0.1rem;
+  padding: 0.6em 0.25em;
+  user-select: none;
+}
+
+.day {
+  @extend .cell;
+  font-size: 2.25em;
+  font-weight: 600;
+  color: #06c;
+}

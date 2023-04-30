@@ -1,0 +1,17 @@
+@import "/styles/variables";
+
+.deleteAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__desc {
+    font: 1.6rem/2rem $font-family;
+    color: $grey;
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    width: 14.7rem;
+  }
+}

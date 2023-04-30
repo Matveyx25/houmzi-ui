@@ -1,0 +1,38 @@
+@import "/styles/variables";
+
+.select {
+  position: relative;
+
+  &_withoutBorder {
+    & input {
+      border: 0;
+    }
+  }
+
+  &__dropdown {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black;
+    background: $white;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+    position: absolute;
+    bottom: -1.5rem;
+    z-index: 1608;
+    transform: translate(0, calc(100%));
+    overflow: auto;
+  }
+
+  &__option {
+    text-align: left;
+    padding: 1rem 2rem .6rem;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background: rgba($orange-light, .5);
+    }
+  }
+}

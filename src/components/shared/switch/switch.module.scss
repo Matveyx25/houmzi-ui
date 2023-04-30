@@ -1,0 +1,42 @@
+@import "/styles/variables";
+
+.switch {
+  &__slider {
+    width: 5rem;
+    height: 3rem;
+    background-color: $white;
+    border: .1rem solid $grey;
+    border-radius: 3.4rem;
+    display: block;
+    position: relative;
+    z-index: 16;
+    cursor: pointer;
+    transition: .4s;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: $grey;
+      border-radius: 50%;
+      position: absolute;
+      top: .2rem;
+      left: .2rem;
+      transition: .4s;
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .switch__slider {
+      background-color: $blue;
+      border: .1rem solid $blue;
+
+      &:before {
+        background: $white;
+        transform: translateX(2rem);
+      }
+    }
+  }
+}

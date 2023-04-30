@@ -1,0 +1,28 @@
+@import "/styles/variables";
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 4rem;
+  margin-bottom: 5rem;
+
+  &__item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black;
+    margin-top: 1rem;
+  }
+}

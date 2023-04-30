@@ -1,0 +1,42 @@
+@import "/styles/variables";
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    font-size: 4rem;
+    color: $grey;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    opacity: .5;
+    transition: color .2s, opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      color: $blue-light;
+    }
+
+    & + & {
+      margin-left: 4rem;
+    }
+  }
+}
+
+.divider {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: $black;
+  text-align: center;
+  margin: 2rem 0;
+
+  @media screen and (min-width: 540px) {
+    margin: 2.5rem 0;
+  }
+}

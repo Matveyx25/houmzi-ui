@@ -1,0 +1,9 @@
+.wrap {
+  text-align: center;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 540px) {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+}

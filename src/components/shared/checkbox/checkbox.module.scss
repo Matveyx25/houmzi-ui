@@ -1,0 +1,52 @@
+@import "/styles/variables";
+
+.checkbox {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: $white;
+  border: 1px solid $black;
+  border-radius: .5rem;
+  margin-right: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: border-color .3s, background-color .3s;
+
+  @media screen and (min-width: 540px) {
+    margin-right: 1.5rem;
+  }
+
+  &.checked {
+    border-color: $blue;
+    background-color: $blue;
+  }
+
+  &__wrap {
+    display: inline-flex;
+    align-items: flex-start;
+
+    & + & {
+      margin-top: 2rem;
+    }
+  }
+
+  &__icon {
+    border-radius: .5rem;
+    display: inline-block;
+    opacity: 0;
+    transition: .3s;
+
+    &.checked {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    font: 1.4rem/2rem $font-family;
+    color: $black;
+    margin-top: .4rem;
+
+    @media screen and (min-width: 540px) {
+      font-size: 1.6rem;
+    }
+  }
+}

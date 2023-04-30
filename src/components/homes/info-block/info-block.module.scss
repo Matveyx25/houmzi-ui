@@ -1,0 +1,29 @@
+@import "/styles/variables";
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem 1rem;
+
+  & + & {
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+    grid-column: 1/-1;
+
+    @media screen and (min-width: 1440px) {
+      grid-column: 1/2;
+      grid-row: 1/5;
+    }
+  }
+
+}

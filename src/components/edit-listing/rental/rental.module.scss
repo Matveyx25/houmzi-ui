@@ -1,0 +1,86 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.rental {
+  &__allow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & > span {
+      margin-right: 1.7rem;
+    }
+  }
+
+  &__text {
+    font: 1.4rem/2rem $font-family;
+    color: $black;
+  }
+
+  &__link {
+    font: 1.4rem/2rem $font-family;
+    color: $blue;
+    text-decoration: none;
+  }
+
+  &__wrap {
+    text-align: center;
+    background: $white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      padding: response(2.5, 4, 76.8, 102.4);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 'title btn' 'desc btn';
+      grid-column-gap: 4rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 4rem;
+    }
+  }
+
+  &__title {
+    font: 1.6rem/2rem $font-family;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(1.6, 2.4, 37.5, 76.8);
+      line-height: response(2, 3, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      margin-bottom: 1.5rem;
+      grid-area: title;
+    }
+  }
+
+  &__actions {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      grid-area: btn;
+      align-self: center;
+    }
+
+    & > button {
+      width: 17.6rem;
+    }
+
+    & > button + button {
+      margin-top: 2rem;
+    }
+  }
+}

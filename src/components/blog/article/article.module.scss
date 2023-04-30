@@ -1,0 +1,257 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.article {
+  margin-bottom: 5rem;
+
+  @media screen and (min-width: 375px) {
+    margin-bottom: response(5, 6, 37.5, 76.8);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 6rem;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 21.5rem;
+    border-radius: 1.5rem;
+    object-fit: cover;
+
+    @media screen and (min-width: 375px) {
+      height: response(21.5, 33.5, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      height: response(33.5, 48.5, 76.8, 144);
+    }
+  }
+
+  &__wrap {
+    margin-top: 2.3rem;
+
+    @media screen and (min-width: 375px) {
+      margin-top: response(2.3, 5, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: $black;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(2.4, 3, 37.5, 76.8);
+      line-height: response(3, 4, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__info {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2.1rem 1.7rem;
+    grid-gap: .4rem 1rem;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 8rem;
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 0 1.5rem;
+    }
+  }
+
+  &__avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    grid-row: 1/-1;
+
+    @media screen and (min-width: 768px) {
+      width: 6.1rem;
+      height: 6.1rem;
+      border-radius: 2rem;
+      grid-column: -1/-2;
+    }
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $black;
+    white-space: nowrap;
+    align-self: flex-end;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: $grey;
+    white-space: nowrap;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      text-align: right;
+    }
+  }
+
+  &__content {
+    margin-top: 2rem;
+
+    @media screen and (min-width: 375px) {
+      margin-top: response(2, 4, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: 4rem;
+    }
+
+    & h2 {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 500;
+      color: $black;
+
+      @media screen and (min-width: 375px) {
+        font-size: response(1.4, 2.4, 37.5, 76.8);
+        line-height: response(2, 3, 37.5, 76.8);
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+    }
+
+    & > * + h2 {
+      margin-top: 3rem;
+
+      @media screen and (min-width: 375px) {
+        margin-top: response(3, 4, 37.5, 76.8);
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-top: 4rem;
+      }
+    }
+
+    & p {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $black;
+      text-align: justify;
+
+      @media screen and (min-width: 375px) {
+        font-size: response(1.4, 1.6, 37.5, 76.8);
+        line-height: response(2, 2.3, 37.5, 76.8);
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+      }
+    }
+
+    & > * + p {
+      margin-top: 2rem;
+
+      @media screen and (min-width: 375px) {
+        margin-top: response(2, 2.3, 37.5, 76.8);
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-top: 2.3rem;
+      }
+    }
+
+    & > h2 + p {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.preview {
+  width: 30rem;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+
+  &__title {
+    width: 11rem;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: $grey;
+    display: inline-block;
+  }
+
+  &__arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba($black, .4);
+    border-radius: 1rem;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    & i {
+      font-size: 1.1rem;
+      color: $white;
+      display: block;
+      transform: rotateZ(90deg);
+    }
+  }
+
+  &.prev {
+    text-align: right;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    left: -30rem;
+    transform: translateX(-3rem);
+  }
+
+  &.next {
+    right: -30rem;
+    transform: translateX(3rem);
+
+    .preview__arrow {
+      & i {
+        transform: rotateZ(-90deg);
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 19.5rem;
+    border-radius: 1.5rem;
+  }
+}

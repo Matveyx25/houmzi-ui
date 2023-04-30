@@ -1,0 +1,15 @@
+.tab {
+  height: 0;
+  position: relative;
+  top: 0;
+  right: -100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: right .4s, opacity 1s;
+
+  &.active {
+    height: 100%;
+    right: 0;
+    opacity: 1;
+  }
+}

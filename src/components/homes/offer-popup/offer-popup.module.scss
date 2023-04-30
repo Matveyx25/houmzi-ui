@@ -1,0 +1,112 @@
+@import "styles/variables";
+
+.offer {
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $grey;
+    text-align: center;
+
+    &_top {
+      margin-bottom: 2rem;
+    }
+
+    &_bottom {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.form {
+  display: grid;
+  grid-row-gap: .4rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.4rem 3rem;
+  }
+
+  & > * + *:not(button) {
+    margin-top: 0 !important;
+  }
+
+  &__full {
+    grid-column: 1/-1;
+  }
+
+  &__btn {
+    width: 100%;
+    margin: 3rem auto 0;
+    grid-column: 1/-1;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.users {
+  margin-bottom: 3rem;
+}
+
+.user {
+  display: flex;
+
+  &__avatar {
+    width: 7.4rem;
+    height: 7.4rem;
+    background: $blue-extra-light;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      color: $blue;
+      font-size: 3.4rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 6.4rem;
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    & > * + * {
+      margin-top: .5rem;
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+
+    & i {
+      font-size: 1.3rem;
+      color: $orange;
+      margin-top: .3rem;
+      margin-right: .6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $grey;
+
+    &_orange {
+      color: $orange;
+    }
+  }
+}

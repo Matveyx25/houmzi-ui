@@ -1,0 +1,137 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.footer {
+  padding: 0 2.5rem;
+
+  @media screen and (min-width: 375px) {
+    padding: 0 response(2.5, 5, 37.5, 76.8);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 response(5, 7, 76.8, 144);
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 7rem;
+  }
+
+  &__wrap {
+    width: 100%;
+    padding: 2rem 0;
+    border-top: .1rem solid rgba($grey, .7);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "socials" "nav" "copyright";
+    grid-gap: 2rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 1.5rem 0;
+      grid-template-columns: auto 1fr;
+      grid-template-areas: "socials nav" "copyright copyright";
+      grid-column-gap: 5rem;
+    }
+
+    @media screen and (min-width: 1300px) {
+      padding: 2.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $grey;
+    white-space: nowrap;
+    grid-area: copyright;
+
+    @media screen and (min-width: 375px) {
+      font-size: response(1.2, 1.4, 37.5, 144);
+      line-height: response(1.6, 2, 37.5, 144);
+    }
+
+    @media screen and (min-width: 1300px) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  grid-area: socials;
+
+  &__item {
+    color: $grey;
+    text-decoration: none;
+    opacity: .5;
+    transition: .2s;
+    cursor: pointer;
+
+    & + & {
+      margin-left: 3rem;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      color: $blue-light;
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 1.5rem 6.1rem;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  grid-area: nav;
+
+  @media screen and (min-width: 768px) {
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1rem 5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    grid-gap: 0;
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $grey;
+    text-decoration: none;
+    transition: color .2s;
+
+    @media screen and (min-width: 768px) {
+      font-size: response(1.4, 1.6, 76.8, 144);
+      line-height: response(1.6, 2, 76.8, 144);
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+
+      & + & {
+        margin-left: 4rem;
+      }
+    }
+
+    &:hover {
+      color: $black;
+    }
+
+    &:active,
+    &.active {
+      color: $blue-light;
+    }
+  }
+}

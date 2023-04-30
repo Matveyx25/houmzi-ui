@@ -1,0 +1,78 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.address {
+  padding: 0 2rem;
+
+  @media screen and (min-width: 375px) {
+    padding-right: response(2, 4, 37.5, 192);
+    padding-left: response(2, 4, 37.5, 192);
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  &__map {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    display: block;
+
+    @media screen and (min-width: 375px) {
+      height: response(18, 21.5, 37.5, 76.8);
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 21.5rem;
+    }
+
+    & > div > div {
+      border-radius: 1rem;
+    }
+  }
+
+  &__wrap {
+    margin-top: 2.5rem;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 3rem;
+    }
+  }
+
+  &__addressWrap {
+    display: flex;
+  }
+
+  &__street {
+    font: 2.4rem/3rem $font-family;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__city {
+    font: 1.6rem/2rem $font-family;
+    color: $grey;
+    margin-top: .5rem;
+  }
+
+  &__icon {
+    color: $blue;
+    margin-top: .3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  &__hide {
+    white-space: nowrap;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      justify-self: flex-end;
+    }
+  }
+}

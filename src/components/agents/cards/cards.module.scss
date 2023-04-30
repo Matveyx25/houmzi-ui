@@ -1,0 +1,152 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+@mixin n-columns($min-width, $gutter, $last-equal: false, $max-cols: 5) {
+  .cards__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$gutter;
+    margin-top: -$gutter;
+
+    .card {
+      flex: 1 0 $min-width;
+      margin-left: $gutter;
+      margin-top: $gutter;
+
+      @if $last-equal {
+        @for $i from 2 through $max-cols {
+          $screen-width: ($min-width*$i)+($gutter*$i);
+          $column-width: (100%/$i);
+          @media (min-width: $screen-width) {
+            max-width: calc(#{$column-width} - #{$gutter});
+          }
+        }
+
+        $column-width: (100%/$max-cols);
+        @media (min-width: $min-width*$max-cols) {
+          min-width: calc(#{$column-width} - #{$gutter});
+        }
+      }
+    }
+  }
+}
+
+.cards {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 375px) {
+    margin-top: response(2, 6, 37.5, 76.8);
+    margin-bottom: response(4, 7, 37.5, 76.8);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+  }
+}
+
+@include n-columns(416px, 30px, true, 3);
+
+
+.card {
+  background: $white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 .4rem 2.5rem rgba(25, 36, 95, .1);
+
+  &__wrap {
+    height: 8.9rem;
+    display: flex;
+  }
+
+  &__avatar {
+    width: 8.9rem;
+    height: 8.9rem;
+    background: $blue-extra-light;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      color: $blue;
+      font-size: 3.4rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 6.4rem;
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    & > * + * {
+      margin-top: .5rem;
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+
+    & i {
+      font-size: 1.3rem;
+      color: $orange;
+      margin-top: .3rem;
+      margin-right: .6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $grey;
+
+    &_orange {
+      color: $orange;
+    }
+  }
+
+  &__mediaList {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__media {
+    width: 100%;
+    min-width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 1rem;
+    object-fit: cover;
+
+    & + & {
+      margin-left: 1rem;
+    }
+  }
+
+  &__buttons {
+    margin-top: 3.5rem;
+    display: flex;
+  }
+
+  &__btn {
+    width: 100%;
+
+    & + & {
+      margin-left: 2rem;
+    }
+  }
+}
+

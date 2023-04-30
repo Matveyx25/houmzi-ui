@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  text-align: center;
+
+  & + & {
+    margin-top: 2.6rem;
+  }
+}
+
+.price {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 500;
+  color: $blue;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.wrap {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  & i {
+    font-size: 4.4rem;
+    color: $blue;
+    margin: 0 4rem;
+    display: inline-block;
+    transform: rotateZ(180deg);
+  }
+}
+
+.btn {
+  width: 21rem;
+  height: 4rem;
+  margin: 4rem auto 0;
+  display: block;
+}

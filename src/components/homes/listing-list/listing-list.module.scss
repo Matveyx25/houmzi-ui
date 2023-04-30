@@ -1,0 +1,84 @@
+@import "/styles/variables";
+
+.list {
+  min-width: 40rem;
+  height: 100%;
+  margin-top: .5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1024px) {
+    width: 40rem;
+    padding-left: 4rem;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1400px) {
+    min-width: 64rem;
+    width: 64rem;
+  }
+
+  &__title {
+    font: 3rem/4rem $font-family;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 1.8rem;
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+    }
+  }
+
+  &__info {
+    margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__count {
+    font: 1.4rem/2rem $font-family;
+    color: $grey;
+    margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__scroll {
+    width: 100%;
+    height: 100%;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__wrap {
+    width: 100%;
+    display: grid;
+    grid-gap: .8rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

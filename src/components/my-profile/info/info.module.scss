@@ -1,0 +1,142 @@
+@import "/styles/variables";
+
+.info {
+  padding: 0 4rem;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+
+    @media screen and (min-width: 1440px) {
+      align-items: center;
+    }
+  }
+
+  &__avatar {
+    width: 5.8rem;
+    height: 5.8rem;
+    color: #55B7F3;
+    background: $blue-extra-light;
+    border-radius: 1.5rem;
+    margin-right: 1.2rem;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 3rem;
+      margin-right: 2rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 4.4rem;
+    }
+
+    & i {
+      font-size: 3.4rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 6.4rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        font-size: 8.4rem;
+      }
+    }
+  }
+
+  &__data {
+    @media screen and (min-width: 768px) {
+      padding-top: .8rem;
+    }
+
+
+    @media screen and (min-width: 1440px) {
+      padding: 0;
+    }
+  }
+
+  &__name {
+    font: 1.6rem/2rem $font-family;
+    font-weight: 500;
+    color: $black;
+    padding-left: .9rem;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  &__item {
+    font: 1.6rem/2rem $font-family;
+    color: $black;
+    display: flex;
+    align-items: center;
+
+    &_grey {
+      color: $grey;
+    }
+
+    & i {
+      color: $grey;
+    }
+
+    & * + * {
+      margin-left: .4rem;
+    }
+
+    & + & {
+      margin-top: .6rem;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    height: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    & + & {
+      margin-left: 2.3rem;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+    }
+
+    &_edit {
+      width: 10.8rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 14.4rem;
+      padding: 0;
+    }
+  }
+}

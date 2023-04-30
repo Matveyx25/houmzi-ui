@@ -1,0 +1,35 @@
+@import "styles/variables";
+
+.breadcrumbs {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: $black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 11.4rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    margin-top: 5rem;
+  }
+
+  &__link {
+    color: $grey;
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  & i {
+    font-size: .6rem;
+    color: $grey;
+    margin: 0 1.3rem;
+    display: inline-block;
+    transform: rotateZ(-90deg);
+  }
+}

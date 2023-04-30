@@ -1,0 +1,50 @@
+@import "styles/variables";
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+
+  &__img {
+    width: 100%;
+    height: 18rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    grid-column: 1/-1;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+    grid-column: 1/-1;
+    cursor: pointer;
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $black;
+    grid-column: 1/-1;
+  }
+
+  &__author {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $blue;
+
+    & span {
+      color: $grey;
+    }
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $grey;
+    justify-self: flex-end;
+  }
+}

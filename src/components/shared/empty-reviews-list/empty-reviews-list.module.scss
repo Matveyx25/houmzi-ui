@@ -1,0 +1,30 @@
+@import '/styles/variables';
+
+.emptyReviewsList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    width: 20rem;
+    font: 2rem/3.1rem $font-family;
+    color: $grey;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__img {
+    width: 10rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 768px) {
+      width: 15rem;
+    }
+  }
+}

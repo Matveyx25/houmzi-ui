@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.wrap {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.indicator {
+  min-width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: .6rem;
+  display: inline-block;
+
+  &_orange {
+    background: $orange;
+  }
+
+  &_blue {
+    background: $blue-light;
+  }
+}

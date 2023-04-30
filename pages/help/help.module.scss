@@ -1,0 +1,9 @@
+.help {
+  width: 100%;
+  max-width: 144rem;
+  margin: 14rem auto 0;
+
+  @media screen and (min-width: 600px) {
+    margin-top: 9rem;
+  }
+}

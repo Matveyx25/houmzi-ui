@@ -1,0 +1,68 @@
+import { IListing } from '../../interfaces/not-found/listing.interface';
+
+export const listings: IListing[] = [
+  {
+    id: '1',
+    img: 'https://www.gwd.ru/upload/resize_cache/iblock/d79/300_200_1/d798f3a72cca1a5dbcb48a8462203422.png',
+    price: 850,
+    date: '2020-07-18T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: false,
+  },
+  {
+    id: '2',
+    img: 'https://houses.ru/upload/iblock/a05/KD_744.jpg',
+    price: 350,
+    date: '2020-07-19T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: true,
+  },
+  {
+    id: '3',
+    img: 'https://www.gwd.ru/upload/resize_cache/iblock/d79/300_200_1/d798f3a72cca1a5dbcb48a8462203422.png',
+    price: 850,
+    date: '2020-07-18T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: false,
+  },
+  {
+    id: '4',
+    img: 'https://houses.ru/upload/iblock/a05/KD_744.jpg',
+    price: 350,
+    date: '2020-07-19T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: true,
+  },
+  {
+    id: '5',
+    img: 'https://www.gwd.ru/upload/resize_cache/iblock/d79/300_200_1/d798f3a72cca1a5dbcb48a8462203422.png',
+    price: 850,
+    date: '2020-07-18T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: false,
+  },
+  {
+    id: '6',
+    img: 'https://houses.ru/upload/iblock/a05/KD_744.jpg',
+    price: 350,
+    date: '2020-07-19T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: true,
+  },
+  {
+    id: '7',
+    img: 'https://www.gwd.ru/upload/resize_cache/iblock/d79/300_200_1/d798f3a72cca1a5dbcb48a8462203422.png',
+    price: 850,
+    date: '2020-07-18T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: false,
+  },
+  {
+    id: '8',
+    img: 'https://houses.ru/upload/iblock/a05/KD_744.jpg',
+    price: 350,
+    date: '2020-07-19T19:20:42.720Z',
+    address: '105 E 14th Street, Hastings, NE',
+    isSaved: true,
+  },
+];

@@ -1,0 +1,41 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.editorContainer{
+	padding: 4rem;
+	margin: 0;
+	position: relative;
+
+	@media screen and (min-width: 375px) {
+		padding: 4rem;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: response(4, 6, 76.8, 144);
+		border-radius: 4rem;
+		margin: 0;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 6rem;
+		margin: 0;
+	}
+}
+
+.buttonWrapper{
+	margin: 16px auto;	
+	width: fit-content;
+}
+
+.title {
+	font-size: 3rem;
+	line-height: 3.8rem;
+	font-weight: 500;
+	color: #000;
+	margin-top: 2rem;
+	margin-bottom: 1.7rem;
+}
+
+.richText{
+	background: white;
+}

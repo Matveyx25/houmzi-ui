@@ -1,0 +1,106 @@
+@import "styles/variables";
+
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 0;
+  }
+
+  & + & {
+    padding-top: 2rem;
+    border-top: .1rem solid rgba($grey, .4);
+    margin-top: 2rem;
+  }
+
+  &__avatar {
+    width: 7.4rem;
+    height: 7.4rem;
+    background: $blue-extra-light;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      color: $blue;
+      font-size: 3.4rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 6.4rem;
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    & > * + * {
+      margin-top: .5rem;
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    & i {
+      font-size: 1.3rem;
+      color: $orange;
+      margin-top: .3rem;
+      margin-right: .6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $grey;
+
+    &_orange {
+      color: $orange;
+    }
+  }
+
+  &__btn {
+    width: 13.9rem;
+    height: 4rem;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: $grey;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.wrap {
+  grid-column: 1/-1;
+  justify-self: center;
+
+  @media screen and (min-width: 768px) {
+    grid-column: inherit;
+  }
+}

@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.container {
+  position: relative;
+}
+
+.wrap {
+  width: 100%;
+  border: 2px solid #06c;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.input {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #333;
+  background: transparent !important;
+  padding: 1rem 2rem;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+
+  &::placeholder {
+    font-size: 0.9rem;
+    color: #999;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  background: $white;
+  padding: 0;
+  border: none;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  transform: none !important;
+  z-index: 16;
+}

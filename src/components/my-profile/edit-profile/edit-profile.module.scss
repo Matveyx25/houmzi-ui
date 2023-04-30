@@ -1,0 +1,90 @@
+@import "/styles/variables";
+
+.avatar {
+  width: 12.2rem;
+  height: 12.2rem;
+  color: #55B7F3;
+  background: $blue-extra-light;
+  border-radius: 4rem;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrap {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+
+    & > i {
+      color: $white;
+      position: absolute;
+      right: 1.3rem;
+      bottom: 1.3rem;
+      cursor: pointer;
+    }
+  }
+
+  &__mask {
+    background: rgba($black, .2);
+    border-radius: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & > i {
+    font-size: 3.4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 6.4rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 8.4rem;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  margin-top: 3.7rem;
+  display: grid;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "name name" "email phone" "btn btn";
+    grid-column-gap: 2rem;
+  }
+
+  &__name {
+    @media screen and (min-width: 768px) {
+      grid-area: name;
+    }
+  }
+
+  &__email {
+    @media screen and (min-width: 768px) {
+      grid-area: email;
+    }
+  }
+
+  &__phone {
+    @media screen and (min-width: 768px) {
+      grid-area: phone;
+    }
+  }
+
+  & button {
+    width: 23rem;
+    margin-top: 2.4rem;
+    justify-self: center;
+
+    @media screen and (min-width: 768px) {
+      grid-area: btn;
+    }
+  }
+}

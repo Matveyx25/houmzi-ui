@@ -1,0 +1,17 @@
+.zoom {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5rem;
+  bottom: 2.5rem;
+
+  & > * + * {
+    margin-top: .4rem;
+  }
+
+  &__btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0 !important;
+  }
+}

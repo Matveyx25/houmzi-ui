@@ -1,0 +1,58 @@
+@import "styles/variables";
+
+.menu {
+  padding-top: 3.7rem;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1440px) {
+    width: 16.2rem;
+  }
+
+  &__item {
+    color: $grey;
+    text-decoration: none;
+
+    @media screen and (min-width: 1440px) {
+      color: $black;
+      display: flex;
+      align-items: center;
+    }
+
+    & + & {
+      margin-top: 3.5rem;
+    }
+
+    &.active {
+      color: $blue;
+
+      &:before {
+        @media screen and (min-width: 1440px) {
+          content: '';
+          width: .3rem;
+          height: 2.1rem;
+          background: $blue;
+          border-radius: .2rem;
+          margin-right: 1.5rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font: 1.6rem/2rem $font-family;
+    white-space: nowrap;
+    display: none;
+
+    @media screen and (min-width: 1440px) {
+      display: inline-block;
+    }
+  }
+}

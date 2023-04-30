@@ -1,0 +1,13 @@
+.list {
+  height: 100%;
+  padding: 2.5rem;
+  margin: -2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 1rem;
+    margin: -1rem;
+  }
+}

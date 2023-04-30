@@ -1,0 +1,37 @@
+@import "styles/variables";
+
+.wrap {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 5rem;
+}
+
+.btn {
+  width: 6.7rem;
+  height: 3.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & i {
+    font-size: 1rem;
+    margin-top: .3rem;
+    margin-left: .2rem;
+    display: inline-block;
+    transform: rotateX(180deg);
+  }
+}
+
+.dropdown {
+  background: $white;
+  padding: 2rem;
+  box-shadow: 0 4px 25px rgba(25, 36, 95, .1);
+  border-radius: 1rem !important;
+  display: grid;
+  grid-gap: 2rem;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateY(-1.2rem);
+}

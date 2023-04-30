@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+  align-items: flex-end;
+  margin-right: auto;
+
+  &__img {
+    width: 3.6rem;
+
+    @media screen and (min-width: 600px) {
+      width: 2.7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 3.2rem;
+    }
+  }
+
+  &__text {
+    width: 10rem;
+    margin-left: 1rem;
+    display: none;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 11.5rem;
+      margin-left: 1.2rem;
+    }
+  }
+}

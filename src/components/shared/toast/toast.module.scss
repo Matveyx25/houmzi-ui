@@ -1,0 +1,21 @@
+@import "/styles/variables";
+
+.toast {
+  height: 5rem;
+  min-height: 5rem !important;
+  color: $white;
+  font: 1.6rem/2rem $font-family;
+  padding: 1.5rem !important;
+  border-radius: 1rem !important;
+
+
+  &.Toastify__toast {
+    &--success {
+      background: $blue;
+    }
+
+    &--error {
+      background: $red;
+    }
+  }
+}

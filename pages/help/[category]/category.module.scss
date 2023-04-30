@@ -1,0 +1,9 @@
+.article {
+  width: 100%;
+  max-width: 108rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 !important;
+  }
+}
