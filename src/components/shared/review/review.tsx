@@ -1,5 +1,5 @@
 import React, { RefObject } from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './review.module.scss';
 import { WithTranslation, withTranslation } from 'react-i18next';
 import { IReview } from '../../../interfaces/shared/review.interface';

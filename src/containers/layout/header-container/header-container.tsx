@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './header-container.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { IRootState } from '../../../store/reducers';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './action-types.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { actionTypes } from '../../../data/buy/actionTypes.data';
 import { IOption } from '../../../interfaces/shared/option.interface';
 import { Radio } from '../../shared/radio/radio';

@@ -1,5 +1,5 @@
 import { Component, ReactElement } from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './socials-auth.module.scss';
 import { ISocialButton } from '../../../interfaces/auth/social-button.interface';
 import { socialButtons } from '../../../data/auth/social-buttons.data';

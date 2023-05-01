@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './filters.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import Swiper, { ReactIdSwiperProps } from 'react-id-swiper';
 import { LayoutContext } from '../../../contexts/layout.context';
 

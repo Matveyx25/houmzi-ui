@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './profile.module.scss';
 import Dropdown from './dropdown/dropdown';
 import { IProfileInfo } from '../../interfaces/shared/profile-info.interface';

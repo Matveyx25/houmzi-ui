@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import s from './list.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Card } from '../card/card';
 import { ITariff } from '../../../interfaces/subscriptions/tariff.interface';
 import Swiper, { ReactIdSwiperProps } from 'react-id-swiper';

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './menu-container.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { connect } from 'react-redux';
 import i18n from 'i18next';
 import { Dispatch } from 'redux';

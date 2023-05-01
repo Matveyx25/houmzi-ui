@@ -1,6 +1,6 @@
 import React, { RefObject } from 'react';
 import { ICountriesAndPhones } from '../../../data/countries-and-phones';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from '../../shared/select/select.module.scss';
 
 interface IProps {

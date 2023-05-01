@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './marker.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { IListingCard } from '../../../../../interfaces/buy/listing-card.interface';
 import ListingCard from '../listing-card/listing-card';
 

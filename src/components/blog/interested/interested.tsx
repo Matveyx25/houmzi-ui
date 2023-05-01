@@ -16,7 +16,7 @@ const swiperConfig: ReactIdSwiperProps = {
 export const Interested: React.FC<IProps> = ({ articles }) => (
   <div className={s.interested}>
     <h2 className={s.interested__title}>
-      You may be interested
+      Вам может понравиться
     </h2>
     <Swiper {...swiperConfig}>
       {

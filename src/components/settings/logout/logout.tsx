@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './logout.module.scss';
 import sSettings from '../../../../pages/dashboard/settings/settings.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Block } from '../block/block';
 
 interface IProps {

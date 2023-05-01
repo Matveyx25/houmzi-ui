@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import s from './article.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import Moment from 'react-moment';
 import { IArticle, IArticleCardFull, IAuthor } from '../../../interfaces/blog.interfaces';
 import { LayoutContext } from '../../../contexts/layout.context';
@@ -73,10 +73,6 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
           {article?.title}
         </h1>
         <div className={s.article__info}>
-          {/* <img src={(article.author as IAuthor)?.avatar} alt="" className={s.article__avatar}/>
-          <div className={s.article__name}>
-            {(article.author as IAuthor)?.name}
-          </div> */}
           <Moment className={s.article__date} format="DD MMM YYYY">{article?.date}</Moment>
         </div>
       </div>

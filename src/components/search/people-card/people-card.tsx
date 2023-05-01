@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './people-card.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 
 class PeopleCard extends React.Component {
   avatar: string = 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb';

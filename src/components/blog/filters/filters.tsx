@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './filters.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import Swiper, { ReactIdSwiperProps } from 'react-id-swiper';
 import { ICategory } from '../../../interfaces/blog.interfaces';
 
@@ -33,7 +33,7 @@ export const Filters: React.FC<IProps> = ({ categories, categoryId, changeCatego
         className={c(s.filters__item, categoryId === null && s.active)}
         onClick={() => changeCategoryId(null)}
       >
-        All
+        Все
       </div>
       {
         getFilters(categories, categoryId, changeCategoryId)

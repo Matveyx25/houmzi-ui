@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './address.module.scss';
 import { Checkbox } from '../../shared/checkbox/checkbox';
 import { GoogleMap } from '../../shared/google-map/google-map';

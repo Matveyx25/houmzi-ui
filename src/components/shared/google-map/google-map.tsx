@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './google-map.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { mapStyle } from '../../../helpers/google-map/map-style';
 import { ZoomPanel } from './components/zoom-panel/zoom-panel';
 import { ICluster } from '../../../interfaces/shared/cluster.interface';

@@ -5,7 +5,7 @@ import { Listings } from '../../src/components/not-found/listings/listings';
 import { Layout } from '../../src/containers/layout/layout-container';
 
 const NotFound: React.FC = () => (
-  <Layout title="Not Found">
+  <Layout title="Not found">
     <section className={s.notFound}>
       <img src="/images/not-found.svg" alt="Not found image" className={s.notFound__img}/>
       <div className={s.notFound__wrap}>

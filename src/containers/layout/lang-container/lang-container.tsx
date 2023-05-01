@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './lang-container.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { IRootState } from '../../../store/reducers';
 import { lang } from '../../../store/selectors/lang.selectors';
 import { connect } from 'react-redux';

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './filter-block.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 
 interface IProps {
   title: string

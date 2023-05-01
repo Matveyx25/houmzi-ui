@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './select.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Button } from '../../shared/button/button';
 
 interface IProps {

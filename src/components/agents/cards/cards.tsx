@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './cards.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Button } from '../../shared/button/button';
 import { IAgent } from '../../../interfaces/agent.interface';
 import Link from 'next/link';

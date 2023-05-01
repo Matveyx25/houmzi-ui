@@ -4,7 +4,6 @@ import s from './editor.module.scss'
 import { Button } from '../../shared/button/button';
 import { Input } from '../../shared/input/input';
 import { Dropzone } from '../dropzone/dropzone';
-import { markdownToHtml } from '../../../helpers/markdown-parser';
 
 const ReactQuill = dynamic(
 	() => {
@@ -27,8 +26,7 @@ export const Editor = () => {
 				{ indent: '-1' },
 				{ indent: '+1' },
 			],
-			['link', 'image', 'video'],
-			['clean'],
+			['link'],
 		],
 		clipboard: {
 			matchVisual: false,
@@ -36,7 +34,7 @@ export const Editor = () => {
 	}
 
 	const onSubmit = () => {
-		console.log(markdownToHtml(value));
+		console.log(value);
 	}
 
 	return (

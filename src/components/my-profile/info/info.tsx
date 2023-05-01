@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './info.module.scss';
 import { WithTranslation, withTranslation } from 'react-i18next';
 import { IProfileInfo } from '../../../interfaces/shared/profile-info.interface';

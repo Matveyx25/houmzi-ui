@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './input.module.scss';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {

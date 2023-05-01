@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './tabs.module.scss';
 import { TabControl } from '../tab-control/tab-control';
 import { Tab } from '../tab/tab';

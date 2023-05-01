@@ -12,7 +12,7 @@ interface IProps {
 export const Banner: React.FC<IProps> = ({ articles }) => (
   <div className={s.banner}>
     <h1 className={s.banner__title}>
-      Blog
+      Блог
     </h1>
     <div className={s.banner__list}>
       {

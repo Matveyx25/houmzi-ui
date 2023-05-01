@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './listing-card.module.scss';
 import { IListingCardWithClusterId } from '../../../interfaces/buy/listing-card.interface';
 import Moment from 'react-moment';

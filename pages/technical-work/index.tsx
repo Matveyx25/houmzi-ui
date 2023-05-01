@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './technical-work.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Button } from '../../src/components/shared/button/button';
 import Link from 'next/link';
 import { Layout } from '../../src/containers/layout/layout-container';

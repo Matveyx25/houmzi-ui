@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import s from './offer-popup.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Input } from '../../shared/input/input';
 import { Button } from '../../shared/button/button';
 import { validateForm } from '../../../helpers/validate-form.helper';

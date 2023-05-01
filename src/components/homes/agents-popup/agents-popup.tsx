@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import s from './agents-popup.module.scss';
 import { IUser } from '../../../interfaces/buy/user.interface';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Button } from '../../shared/button/button';
 import { LayoutContext } from '../../../contexts/layout.context';
 

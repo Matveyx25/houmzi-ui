@@ -1,5 +1,5 @@
 import React, { RefObject } from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './select.module.scss';
 import { IOption } from '../../../interfaces/shared/option.interface';
 

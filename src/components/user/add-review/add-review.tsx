@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './add-review.module.scss';
 import { Button } from '../../shared/button/button';
 

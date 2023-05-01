@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './listing-card.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import Moment from 'react-moment';
 import { IListingCard } from '../../../../../interfaces/buy/listing-card.interface';
 import { WithRouterProps } from 'next/dist/client/with-router';

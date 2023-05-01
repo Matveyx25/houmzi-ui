@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './media-popup.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { IMedia } from '../../../interfaces/edit-listing/media.interface';
 import { LayoutContext } from '../../../contexts/layout.context';
 

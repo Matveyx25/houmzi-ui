@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './all-filters.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { FilterBlock } from '../filter-block/filter-block';
 import { actionTypes } from '../../../data/buy/actionTypes.data';
 import { IListingConfig } from '../../../interfaces/edit-listing/listing-config.interface';

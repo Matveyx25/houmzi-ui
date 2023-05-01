@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './share-button.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Popup } from '../popup/popup';
 import { EmailPopup } from './email-popup/email-popup';
 import { UsersPopup } from './users-popup/users-popup';

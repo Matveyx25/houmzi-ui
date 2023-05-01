@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './two-factor.module.scss';
 import sSettings from '../../../../pages/dashboard/settings/settings.module.scss';
 import { Input } from '../../shared/input/input';

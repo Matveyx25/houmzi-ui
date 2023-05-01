@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './popup.module.scss';
 import { Dialog } from './components/dialog';
 

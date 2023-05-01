@@ -1,5 +1,5 @@
 import React from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './google-places-autocomplete.module.scss';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { Input } from '../input/input';

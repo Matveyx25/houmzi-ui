@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './sort.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { IOption } from '../../../interfaces/shared/option.interface';
 
 interface IProps {

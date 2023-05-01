@@ -49,7 +49,7 @@ export class News extends React.Component<IProps, IState> {
     return (
       <div className={s.news}>
         <h2 className={s.news__title}>
-          News
+          Новости
         </h2>
         <Filters categories={categories} categoryId={categoryId} changeCategoryId={this.changeCategoryId}/>
         <div className={s.news__list}>

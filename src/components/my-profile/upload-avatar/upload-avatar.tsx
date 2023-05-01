@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import c from 'classnames/bind';
+import c from 'classnames';
 import s from './upload-avatar.module.scss';
 
 interface IProps {

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './users-popup.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Input } from '../../input/input';
 import { Button } from '../../button/button';
 import { UserCard } from '../user-card/user-card';

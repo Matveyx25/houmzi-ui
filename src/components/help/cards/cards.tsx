@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './cards.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import Link from 'next/link';
 import { cards } from '../../../data/help/cards.data';
 import { IArticle, ICard } from '../../../interfaces/help/card.interface';

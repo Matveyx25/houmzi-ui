@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './search.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 
 interface IProps {
   value: string

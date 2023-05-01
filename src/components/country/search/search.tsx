@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import s from './search.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Block } from '../index';
 import Link from 'next/link';
 import { withRouter } from 'next/router';

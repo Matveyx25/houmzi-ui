@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './cards.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import { Button } from '../../shared/button/button';
 import { cards } from '../../../data/sell/cards.data';
 import { ICard } from '../../../interfaces/sell/card.interface';

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './listing.module.scss';
-import c from 'classnames/bind';
+import c from 'classnames';
 import ListingActions from '../listing-actions/listing-actions';
 import Moment from 'react-moment';
 import { InfoItem } from '../info-item/info-item';
