@@ -18,18 +18,20 @@ export const getCategories = (): Promise<ICategory[]> =>
       .map(({ id, name }) => ({
           id, name,
           articles: []
-          // articles: getCategory(id)
         }),
       ),
     );
 
 export const getCategory = (id: string): Promise<IArticleCardFull[]> =>
   axiosBlog.get('/blog', {params: {tags: id}})
-    .then((res: AxiosResponse) => res.data.content
+    .then((res: AxiosResponse) => {
+     const result = res.data.content
       .map(({ id, title, body, attachment, createdAt }) => ({
         id, title, avatar: getAvatar(attachment), content: body, author: null, date: createdAt,
-      })),
-    );
+      }))
+    return result
+    }
+);
 
 export const getArticle = (id: string): Promise<IArticle> =>
   axiosBlog.get(`/blog/${id}`)
@@ -65,13 +67,10 @@ export const getNearbyArticles = (id: string): Promise<{prev: IArticleCard | nul
 export const getInterestedArticles = (id: string): Promise<IArticleCardFull[]> =>
   axiosBlog.get(`/blog/${id}/interested`).then(
     async (res: AxiosResponse) => {
-      console.log(res.data);
-      return null
+      return res.data.content.map(({ id, title, body, attachment, createdAt }) => ({
+        id, title, avatar: getAvatar(attachment), content: body, author: null, date: createdAt,
+      }))
     }
-    // res.data.content
-    // .map(({ id, title, attachment, body, createdAt }) => {
-    //   return { id, title, avatar: getAvatar(attachment), content: body, date: createdAt,}
-    // })
   );
 
 export const getAuthors = (): Promise<IAuthor[]> =>

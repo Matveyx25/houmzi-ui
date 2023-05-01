@@ -35,11 +35,10 @@ export class News extends React.Component<IProps, IState> {
       ? category.articles
       : categories
         .reduce((accumulator: IArticleCardFull[], currentValue: ICategory) => [...accumulator, ...currentValue.articles], [])
-        .filter((article: IArticleCardFull, i: number, arr: IArticleCardFull[]) =>
-          i === arr.findIndex((a: IArticleCardFull) => article.id === a.id));
+        // .filter((article: IArticleCardFull, i: number, arr: IArticleCardFull[]) =>
+        //   i === arr.findIndex((a: IArticleCardFull) => article.id === a.id));
 
     return renderedArticles
-      .sort((firstArticle: IArticleCardFull, secondArticle: IArticleCardFull) => secondArticle.id - firstArticle.id)
       .map((article: IArticleCardFull) => <Card key={article.id} article={article} authors={authors}/>);
   };
 

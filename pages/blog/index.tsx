@@ -30,6 +30,9 @@ export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps
     const articles: IArticleCard[] = await getArticles();
     const categories: ICategory[] = await getCategories();
     const authors: IAuthor[] = null;
+
+    console.log(categories[0].articles);
+    
     
     return { props: { articles, categories, authors } };
   });

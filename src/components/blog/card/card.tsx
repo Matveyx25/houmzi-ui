@@ -20,7 +20,11 @@ export const Card: React.FC<IProps> = ({ article, authors }) => {
   return (
     <div className={s.card}>
       <Link href={`/blog/${stringToUrl(article?.title)}/${article?.id}`}>
-        <img src={article?.avatar} alt="" className={s.card__img}/>
+      {article.avatar ?
+          <img src={article?.avatar} alt="" className={s.card__img} /> :
+          <div className={s.card__img}>
+            <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
+          </div>}
       </Link>
       <Link href={`/blog/${stringToUrl(article?.title)}/${article?.id}`}>
         <div className={s.card__title}>

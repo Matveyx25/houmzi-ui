@@ -34,11 +34,19 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
                 <i className="icon-arrow" />
               </div>
             </Link>
-            <img src={prev?.avatar} alt="" className={s.preview__img} />
+            {prev.avatar ?
+                <img src={prev?.avatar} alt="" className={s.preview__img} /> :
+                <div className={s.preview__img}>
+                  <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
+                </div>}
           </div>
           }</>
         }
-        <img src={article?.avatar} alt="Avatar" className={s.article__img} />
+         {article.avatar ?
+                <img src={article?.avatar} alt="" className={s.article__img} /> :
+                <div className={s.article__img}>
+                  <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
+                </div>}
         {
           windowWidth >= 1440 &&
           <>{next &&
@@ -51,7 +59,11 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
                   <i className="icon-arrow" />
                 </div>
               </Link>
-              <img src={next?.avatar} alt="" className={s.preview__img} />
+              {next.avatar ?
+                <img src={next?.avatar} alt="" className={s.preview__img} /> :
+                <div className={s.preview__img}>
+                  <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
+                </div>}
             </div>
           }</>
         }

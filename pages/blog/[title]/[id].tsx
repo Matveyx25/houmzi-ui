@@ -38,8 +38,7 @@ export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps
     
     const article =  await getArticle(articleId)
     if (!article) return { redirect: { permanent: false, destination: '/blog' } };
-    // const articles = await getCategory(article.categoryId);
-    const articles: IArticleCardFull[] = []
+    const articles = await getInterestedArticles(articleId);
     const nearbyArticles = await getNearbyArticles(articleId);
 
     return { props: { article, articles, nearbyArticles } };
