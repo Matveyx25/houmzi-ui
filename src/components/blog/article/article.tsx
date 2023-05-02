@@ -77,7 +77,7 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
         </div>
       </div>
       <div className={s.article__content}>
-        {parseText(article?.content)}
+        <p dangerouslySetInnerHTML={{__html: article?.content}}></p>
       </div>
     </div>
   );
