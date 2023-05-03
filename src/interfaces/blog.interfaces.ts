@@ -15,7 +15,7 @@ export interface IArticle extends IArticleCardFull {
 }
 
 export interface ICategory {
-  id: number
+  id: string
   name: string
   articles: IArticleCardFull[]
 }

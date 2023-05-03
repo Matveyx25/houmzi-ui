@@ -4,7 +4,7 @@ import { Banner } from '../../src/components/blog/banner/banner';
 import { News } from '../../src/components/blog/news/news';
 import { GetServerSideProps } from 'next';
 import { wrapper } from '../../src/store/store';
-import { getArticles, getAuthors, getCategories } from '../../src/services/blog.service';
+import { getArticles, getAuthors, getCategories, getCategory } from '../../src/services/blog.service';
 import { Layout } from '../../src/containers/layout/layout-container';
 import { IArticleCard, IAuthor, ICategory } from '../../src/interfaces/blog.interfaces';
 
@@ -30,9 +30,12 @@ export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps
     const articles: IArticleCard[] = await getArticles();
     const categories: ICategory[] = await getCategories();
     const authors: IAuthor[] = null;
-
-    console.log(categories[0].articles);
-    
+    for (let index = 0; index < categories.length; index++) {
+      categories[index].articles = await getCategory(categories[index].id);
+    }
     
     return { props: { articles, categories, authors } };
   });
+
+
+  // http://localhost:3000/blog/pochemu-strogino-luchwij-rajon-moskvy-dlya-pokupki-kvartiry-accb95eb-db38-4c44-ab04-67537868d42d/

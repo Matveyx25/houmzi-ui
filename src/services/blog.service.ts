@@ -12,15 +12,17 @@ export const getArticles = (): Promise<IArticleCard[]> =>
         })
       );
 
+
 export const getCategories = (): Promise<ICategory[]> =>
   axiosBlog.get(baseUrl + '/tags')
     .then((res: AxiosResponse) => res.data.content
-      .map(({ id, name }) => ({
-          id, name,
-          articles: []
-        }),
+      .map(({ id, name }) => {
+          return {id, name, articles: []}
+        },
       ),
     );
+
+    
 
 export const getCategory = (id: string): Promise<IArticleCardFull[]> =>
   axiosBlog.get('/blog', {params: {tags: id}})
