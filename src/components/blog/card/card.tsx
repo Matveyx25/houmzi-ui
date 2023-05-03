@@ -19,7 +19,7 @@ export const Card: React.FC<IProps> = ({ article, authors }) => {
 
   return (
     <div className={s.card}>
-      <Link href={`/blog/${stringToUrl(article?.title)}/${article?.id}`}>
+      <Link href={`/blog/${stringToUrl(article?.title)}-${article?.id}`}>
       {article.avatar ?
           <img src={article?.avatar} alt="" className={s.card__img} /> :
           <div className={s.card__img}>

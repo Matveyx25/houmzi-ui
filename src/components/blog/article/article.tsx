@@ -17,9 +17,6 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
 
   const { prev, next } = nearbyArticles
 
-  const parseText = (text: string) => text?.split('\n')
-    .map((str: string, i: number) => str ? <p key={i}>{str}</p> : <br key={i} />);
-
   return (
     <div className={s.article}>
       <div className={s.article__header}>
@@ -29,7 +26,7 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
             <span className={s.preview__title}>
               {prev?.title}
             </span>
-            <Link href={`/blog/${stringToUrl(prev?.title)}/${prev?.id}`}>
+            <Link href={`/blog/${stringToUrl(prev?.title)}-${prev?.id}`}>
               <div className={s.preview__arrow}>
                 <i className="icon-arrow" />
               </div>
@@ -54,7 +51,7 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
               <span className={s.preview__title}>
                 {next?.title}
               </span>
-              <Link href={`/blog/${stringToUrl(next?.title)}/${next?.id}`}>
+              <Link href={`/blog/${stringToUrl(next?.title)}-${next?.id}`}>
                 <div className={s.preview__arrow}>
                   <i className="icon-arrow" />
                 </div>

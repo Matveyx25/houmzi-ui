@@ -17,7 +17,7 @@ export const Banner: React.FC<IProps> = ({ articles }) => (
     <div className={s.banner__list}>
       {
         articles?.map((article: IArticleCard) => (
-          <Link key={article.id} href={`/blog/${stringToUrl(article?.title)}/${article?.id}`}>
+          <Link key={article.id} href={`/blog/${stringToUrl(article?.title)}-${article?.id}`}>
             <div className={s.card}>
               {article.avatar ?
                 <img src={article.avatar} alt="" className={s.card__img} /> :
