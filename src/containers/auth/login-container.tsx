@@ -20,8 +20,8 @@ interface IProps {
 }
 
 const LoginContainer: React.FC<IProps> = ({ onOpenPopup, onClosePopup, getProfile }) => {
-  const onLogIn = ({ email, password, rememberMe }: ILoginData) => {
-    login(email, password)
+  const onLogIn = (params, rememberMe) => {
+    login(params)
       .then((tokens: ITokens) => {
         setTokens(null, tokens, rememberMe);
         getProfile();

@@ -5,13 +5,19 @@ import { axiosWithContext } from '../helpers/axios.config';
 import { GetServerSidePropsContext } from 'next';
 import { getCookie, removeTokens } from '../helpers/cookies.helpers';
 
-const baseUrl: string = 'auth';
+const baseUrl: string = '/auth';
 
 export const register = (registerData: IRegisterData): Promise<any> =>
   axiosWithContext(null).post(`${baseUrl}/register`, registerData);
 
-export const login = (email, password): Promise<ITokens> =>
-  axiosWithContext(null).post(`${baseUrl}/login`, { email, password })
+export const login = (params): Promise<ITokens> =>
+  axiosWithContext(null).post(`${baseUrl}/realms/houmzi/protocol/openid-connect/token`, 
+  params,
+  // {client_id: 'houmzi', username: email, password, grant_type: 'password' },
+  { 
+    headers: {
+    'content-type': 'application/x-www-form-urlencoded'
+  }})
     .then((response: AxiosResponse<ITokens>) => response.data);
 
 export const confirm = (token: string): Promise<ITokens> =>

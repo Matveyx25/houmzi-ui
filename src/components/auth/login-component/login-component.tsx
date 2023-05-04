@@ -11,7 +11,7 @@ import { WithTranslation, withTranslation } from 'react-i18next';
 interface IProps extends WithTranslation {
   onOpenPopup(name: string): void
 
-  onLogIn(loginData: ILoginData): void
+  onLogIn(params, rememberMe: boolean): void
 }
 
 interface IState {
@@ -46,7 +46,13 @@ class LoginComponent extends React.Component<IProps, IState> {
     const { onLogIn } = this.props;
     const { email, password, rememberMe } = this.state;
 
-    onLogIn({ email, password, rememberMe });
+    const params = new URLSearchParams();
+    params.append('client_id', 'houmzi');
+    params.append('username', email);
+    params.append('password', password);
+    params.append('grant_type', 'password');
+
+    onLogIn(params, rememberMe);
     e.preventDefault();
   };
 
@@ -55,15 +61,15 @@ class LoginComponent extends React.Component<IProps, IState> {
 
     switch (name) {
       case 'email':
-        emailError = !value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
-          ? 'Email is invalid'
-          : '';
+        // emailError = !value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+        //   ? 'Email is invalid'
+        //   : '';
         this.setState({ emailError });
         break;
       case 'password':
-        passwordError = !value.match(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,20}/g)
-          ? 'Password must contain numbers, upper and lower case letters and special characters'
-          : '';
+        // passwordError = !value.match(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,20}/g)
+        //   ? 'Password must contain numbers, upper and lower case letters and special characters'
+        //   : '';
         this.setState({ passwordError });
         break;
     }
@@ -82,7 +88,7 @@ class LoginComponent extends React.Component<IProps, IState> {
         <SocialsAuth/>
         <form onSubmit={this.onSubmit}>
           <Input
-            type="email"
+            type="text"
             name="email"
             value={email}
             placeholder="Email"
