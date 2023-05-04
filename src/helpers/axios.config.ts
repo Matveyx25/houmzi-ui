@@ -10,15 +10,10 @@ let isRefreshing = false;
 let refreshSubscribers: any[] = [];
 
 export const axiosWithContext = (ctx: GetServerSidePropsContext = null): AxiosInstance & { CancelToken?: CancelTokenStatic } => {
-  const axios: AxiosInstance & { CancelToken?: CancelTokenStatic } = Axios.create({ baseURL: 'https://api.rassafel.space/' });
+  const axios: AxiosInstance & { CancelToken?: CancelTokenStatic } = Axios.create({ baseURL: 'https://auth.rassafel.space/'});
 
   axios.interceptors.request.use(
     (config: AxiosRequestConfig) => {
-      config.headers['Accept'] = "*/*";
-      config.headers['Accept-Encoding'] = "gzip, deflate, br";
-      config.headers['Access-Control-Allow-Origin'] = "*";
-      config.headers['Access-Control-Allow-Methods'] = 'GET,PUT,POST,DELETE';
-      config.headers['Access-Control-Allow-Headers'] = 'Content-Type';
       if (!config.headers['Authorization'] && getAccessToken(ctx))
         config.headers['Authorization'] = `Bearer ${getAccessToken(ctx)}`;
       return config;
@@ -33,7 +28,6 @@ export const axiosWithContext = (ctx: GetServerSidePropsContext = null): AxiosIn
       if (error.response?.status === 401) {
         if (!isRefreshing) {
           isRefreshing = true;
-
           Axios.post('https://auth.rassafel.space/auth/realms/houmzi/protocol/openid-connect/token', { client_id: 'houmzi', refresh_token: getCookie(ctx, 'refreshToken'), grand_type: 'refresh_token' },
             { headers: { Authorization: `Bearer ${getAccessToken(ctx)}` } })
             .then((response: AxiosResponse<ITokens>) => response.data)

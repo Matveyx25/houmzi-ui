@@ -4,6 +4,7 @@ import { ITokens } from '../interfaces/auth/tokens.interface';
 import { axiosWithContext } from '../helpers/axios.config';
 import { GetServerSidePropsContext } from 'next';
 import { getCookie, removeTokens } from '../helpers/cookies.helpers';
+import querystring from 'querystring'
 
 const baseUrl: string = '/auth';
 
@@ -12,12 +13,12 @@ export const register = (registerData: IRegisterData): Promise<any> =>
 
 export const login = (params): Promise<ITokens> =>
   axiosWithContext(null).post(`${baseUrl}/realms/houmzi/protocol/openid-connect/token`, 
-  params,
-  // {client_id: 'houmzi', username: email, password, grant_type: 'password' },
-  { 
+  querystring.stringify(params),
+  {
     headers: {
-    'content-type': 'application/x-www-form-urlencoded'
-  }})
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+  })
     .then((response: AxiosResponse<ITokens>) => response.data);
 
 export const confirm = (token: string): Promise<ITokens> =>

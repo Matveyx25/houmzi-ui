@@ -46,13 +46,14 @@ class LoginComponent extends React.Component<IProps, IState> {
     const { onLogIn } = this.props;
     const { email, password, rememberMe } = this.state;
 
-    const params = new URLSearchParams();
-    params.append('client_id', 'houmzi');
-    params.append('username', email);
-    params.append('password', password);
-    params.append('grant_type', 'password');
+    const params = {
+      'username': email,
+      'password': password,
+      'client_id': 'houmzi',
+      'grant_type': 'password'
+    }
 
-    onLogIn(params, rememberMe);
+    onLogIn(params , rememberMe);
     e.preventDefault();
   };
 
