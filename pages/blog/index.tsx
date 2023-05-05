@@ -27,7 +27,7 @@ export default Blog;
 
 export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
   async () => {
-    const articles: IArticleCard[] = await getArticles();
+    const articles: IArticleCard[] = await getArticles(5);
     const categories: ICategory[] = await getCategories();
     const authors: IAuthor[] = null;
     for (let index = 0; index < categories.length; index++) {
@@ -36,6 +36,3 @@ export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps
     
     return { props: { articles, categories, authors } };
   });
-
-
-  // http://localhost:3000/blog/pochemu-strogino-luchwij-rajon-moskvy-dlya-pokupki-kvartiry-accb95eb-db38-4c44-ab04-67537868d42d/

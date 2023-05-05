@@ -6,9 +6,9 @@ import { ICategory } from '../../../interfaces/blog.interfaces';
 
 interface IProps {
   categories: ICategory[]
-  categoryId: number
+  categoryId: string
 
-  changeCategoryId(categoryId: number): void
+  changeCategoryId(categoryId: string): void
 }
 
 const swiperConfig: ReactIdSwiperProps = {

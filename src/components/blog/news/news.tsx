@@ -10,7 +10,7 @@ interface IProps {
 }
 
 interface IState {
-  categoryId: number
+  categoryId: string
 }
 
 export class News extends React.Component<IProps, IState> {
@@ -20,7 +20,7 @@ export class News extends React.Component<IProps, IState> {
     this.state = { categoryId: null };
   }
 
-  changeCategoryId = (categoryId: number) => {
+  changeCategoryId = (categoryId: string) => {
     this.setState({ categoryId });
   };
 

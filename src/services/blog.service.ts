@@ -4,8 +4,8 @@ import { IArticle, IArticleCard, IArticleCardFull, IAuthor, ICategory } from '..
 
 const baseUrl = '/blog';
 
-export const getArticles = (): Promise<IArticleCard[]> =>
-  axiosBlog.get(baseUrl)
+export const getArticles = (size: number = 10): Promise<IArticleCard[]> =>
+  axiosBlog.get(`${baseUrl}?size=${size}`)
     .then((res: AxiosResponse) => res.data.content
         .map(({ id, title, attachment }) => {
           return { id, title, avatar: getAvatar(attachment) }
