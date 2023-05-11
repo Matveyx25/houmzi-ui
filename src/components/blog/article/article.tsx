@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import s from './article.module.scss';
 import c from 'classnames';
 import Moment from 'react-moment';
@@ -39,11 +39,12 @@ export const Article: React.FC<IProps> = ({ article, nearbyArticles }) => {
           </div>
           }</>
         }
-         {article.avatar ?
-                <img src={article?.avatar} alt="" className={s.article__img} /> :
-                <div className={s.article__img}>
-                  <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
-                </div>}
+        <div className={s.article__img}>
+            <img src={article?.avatar ? 
+              article.avatar : 
+              "https://www.svgrepo.com/show/512367/image-picture-973.svg"} 
+              alt="" className={article.avatar ? '' : s.plug}/>
+        </div>
         {
           windowWidth >= 1440 &&
           <>{next &&

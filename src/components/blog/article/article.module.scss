@@ -24,6 +24,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 
     @media screen and (min-width: 375px) {
       height: response(21.5, 33.5, 37.5, 76.8);
@@ -33,7 +35,13 @@
       height: response(33.5, 48.5, 76.8, 144);
     }
     img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .plug{
       width: 20%;
+      height: auto;
       color: transparent;
     }
   }

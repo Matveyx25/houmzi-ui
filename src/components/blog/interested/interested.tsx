@@ -10,7 +10,6 @@ interface IProps {
 
 const swiperConfig: ReactIdSwiperProps = {
   slidesPerView: 'auto',
-  spaceBetween: 20,
 };
 
 export const Interested: React.FC<IProps> = ({ articles }) => (

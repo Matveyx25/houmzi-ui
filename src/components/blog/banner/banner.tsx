@@ -18,12 +18,8 @@ export const Banner: React.FC<IProps> = ({ articles }) => (
       {
         articles?.map((article: IArticleCard) => (
           <Link key={article.id} href={`/blog/${stringToUrl(article?.title)}-${article?.id}`}>
-            <div className={s.card}>
-              {article.avatar ?
-                <img src={article.avatar} alt="" className={s.card__img} /> :
-                <div className={s.imagePlug}>
-                  <img src="https://www.svgrepo.com/show/512367/image-picture-973.svg" decoding="async" />
-                </div>}
+            <div className={article.avatar ? s.card : s.plugCard}>
+              <img src={article.avatar || "https://www.svgrepo.com/show/512367/image-picture-973.svg"} alt="" className={s.card__img} />
               <div className={s.card__title}>
                 {article.title}
               </div>
