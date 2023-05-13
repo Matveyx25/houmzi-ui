@@ -26,12 +26,14 @@ export const confirm = (token: string): Promise<ITokens> =>
     .then((response: AxiosResponse<ITokens>) => response.data);
 
 export const logout = (ctx: GetServerSidePropsContext = null, logoutAll: boolean = false): Promise<any> =>
-  axiosWithContext(ctx).get(`${baseUrl}/logout`, {
-    params: {
-      refreshToken: getCookie(ctx, 'refreshToken'),
-      logoutAll,
-    },
-  }).finally(() => removeTokens(ctx));
+  axiosWithContext(ctx).post(`${baseUrl}/realms/houmzi/protocol/openid-connect/logout`, 
+    querystring.stringify(
+      {'refresh_token': getCookie(ctx, 'refreshToken'),
+      'client_id': 'houmzi'}),
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      }}).finally(() => removeTokens(ctx));
 
 export const forgotPassword = (email: string): Promise<string> =>
   axiosWithContext(null).get(`${baseUrl}/password/forgot`, { params: { email } })

@@ -33,13 +33,13 @@ export const getAccessToken = (ctx: GetServerSidePropsContext = null): string =>
   getCookie(ctx, 'accessToken');
 
 export const setTokens = (ctx: GetServerSidePropsContext = null, {
-  accessToken,
-  refreshToken,
+  access_token,
+  refresh_token,
 }: ITokens, rememberMe?: boolean) => {
   const options = { maxAge: 6 * 24 * 60 * 60 };
 
-  setCookie(ctx, 'accessToken', accessToken, rememberMe && options);
-  setCookie(ctx, 'refreshToken', refreshToken, rememberMe && options);
+  setCookie(ctx, 'accessToken', access_token, rememberMe && options);
+  setCookie(ctx, 'refreshToken', refresh_token, rememberMe && options);
 };
 
 export const removeTokens = (ctx: GetServerSidePropsContext = null) => {
