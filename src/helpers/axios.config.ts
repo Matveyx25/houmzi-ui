@@ -34,7 +34,7 @@ export const axiosWithContext = (ctx: GetServerSidePropsContext = null): AxiosIn
             .then((tokens: ITokens) => {
               setTokens(ctx, tokens);
               isRefreshing = false;
-              onRrefreshed(tokens.accessToken);
+              onRrefreshed(tokens.access_token);
             })
             .catch((err) => {
               removeCookie(ctx, 'accessToken');
